@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration Portal</title>
+
+    <style>
+        body {
+            background-color: skyblue;
+            font-family: Arial;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .nav {
+            text-align: center;
+            margin: 10px;
+        }
+
+        .nav a {
+            background-color: darkblue;
+            color: white;
+            padding: 8px 15px;
+            margin: 5px;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+        .section {
+            background-color: darkblue;
+            color: white;
+            padding: 15px;
+            margin: 20px;
+        }
+
+        input, select {
+            width: 90%;
+            padding: 6px;
+            margin: 5px 0;
+        }
+
+        button {
+            padding: 10px;
+            margin-top: 10px;
+        }
+    </style>
+
+</head>
+<body>
+
+<h2 align="center">lakshya mehrotra 24bci0212</h2>
+
+<h1>Student Registration Portal</h1>
+
+<div class="nav">
+    <a href="#personal">Personal Information</a>
+    <a href="#academic">Academic Details</a>
+    <a href="#address">Address Information</a>
+    <a href="#account">Account Credentials</a>
+</div>
+
+<form onsubmit="alert('Form Submitted Successfully')">
+
+<!-- Section 1 -->
+<div class="section" id="personal">
+    <h2>Personal Information</h2>
+    Full Name: <input type="text"><br>
+    Date of Birth: <input type="date"><br>
+    Gender:
+    <select>
+        <option>Male</option>
+        <option>Female</option>
+    </select><br>
+    Email: <input type="email"><br>
+    Mobile Number: <input type="text"><br>
+</div>
+
+<!-- Section 2 -->
+<div class="section" id="academic">
+    <h2>Academic Details</h2>
+    Register Number: <input type="text"><br>
+    Degree Program: <input type="text"><br>
+    Department: <input type="text"><br>
+    Year of Study: <input type="text"><br>
+</div>
+
+<!-- Section 3 -->
+<div class="section" id="address">
+    <h2>Address Information</h2>
+    Door Number: <input type="text"><br>
+    Street Name: <input type="text"><br>
+    City: <input type="text"><br>
+    State: <input type="text"><br>
+    Pincode: <input type="text"><br>
+</div>
+
+<!-- Section 4 -->
+<div class="section" id="account">
+    <h2>Account Credentials</h2>
+    Username: <input type="text"><br>
+    Password: <input type="password"><br>
+    Confirm Password: <input type="password"><br>
+
+    <button type="submit">Submit</button>
+</div>
+
+</form>
+
+</body>
+</html>
