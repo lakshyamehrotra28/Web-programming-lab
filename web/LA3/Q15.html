@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Font Customization Tool</title>
+</head>
+<body>
+
+<h2>lakshya mehrotra 24bci0212</h2>
+
+<h3>Dynamic Font Customization</h3>
+
+<p id="text">Customize this text using the controls below</p>
+
+<fieldset>
+    <legend>Font Controls</legend>
+
+    Font Size:
+    <input type="range" min="10" max="50" value="16"
+           onchange="changeSize(this.value)">
+    <br><br>
+
+    Text Color:
+    <input type="color" onchange="changeColor(this.value)">
+    <br><br>
+
+    Background Color:
+    <input type="color" onchange="changeBg(this.value)">
+</fieldset>
+
+<script>
+    function changeSize(size) {
+        document.getElementById("text").style.fontSize = size + "px";
+    }
+
+    function changeColor(color) {
+        document.getElementById("text").style.color = color;
+    }
+
+    function changeBg(bg) {
+        document.getElementById("text").style.backgroundColor = bg;
+    }
+</script>
+
+</body>
+</html>

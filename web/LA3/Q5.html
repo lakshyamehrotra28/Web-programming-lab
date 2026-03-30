@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Calculator</title>
+</head>
+<body>
+
+<h2>lakshya mehrotra 24bci0212</h2>
+
+<h3>Calculator</h3>
+
+First Number: <input type="number" id="num1" step="any"><br><br>
+Second Number: <input type="number" id="num2" step="any"><br><br>
+
+<button onclick="calculate('+')">Add</button>
+<button onclick="calculate('-')">Subtract</button>
+<button onclick="calculate('*')">Multiply</button>
+<button onclick="calculate('/')">Divide</button>
+
+<p id="result"></p>
+
+<script>
+    function calculate(operation) {
+        var n1 = parseFloat(document.getElementById("num1").value);
+        var n2 = parseFloat(document.getElementById("num2").value);
+        var result;
+
+        switch(operation) {
+            case '+':
+                result = n1 + n2;
+                break;
+            case '-':
+                result = n1 - n2;
+                break;
+            case '*':
+                result = n1 * n2;
+                break;
+            case '/':
+                if (n2 === 0) {
+                    result = "Cannot divide by zero";
+                } else {
+                    result = n1 / n2;
+                }
+                break;
+        }
+
+        document.getElementById("result").innerHTML = "Result: " + result;
+    }
+</script>
+
+</body>
+</html>

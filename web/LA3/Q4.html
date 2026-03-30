@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rectangle Area Calculation</title>
+</head>
+<body>
+
+<h2>lakshya mehrotra 24bci0212</h2>
+
+<h3>Area of Rectangle</h3>
+
+<p id="result"></p>
+
+<script>
+    // Integer values
+    var length = 10;
+    var width = 5;
+
+    var areaInt = length * width;
+
+    // Floating-point values (loose typing)
+    length = 10.5;
+    width = 5.2;
+
+    var areaFloat = length * width;
+
+    document.getElementById("result").innerHTML =
+        "Area with integers: " + areaInt + "<br>" +
+        "Area with floating values: " + areaFloat;
+</script>
+
+</body>
+</html>

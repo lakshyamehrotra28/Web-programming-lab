@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Information System</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: lightgray;
+        }
+
+        .container {
+            background-color: white;
+            padding: 20px;
+            width: 400px;
+            margin: auto;
+        }
+
+        input {
+            width: 90%;
+            padding: 5px;
+            margin: 5px;
+        }
+
+        button {
+            padding: 8px;
+            margin: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td, th {
+            border: 1px solid black;
+            padding: 5px;
+        }
+    </style>
+
+</head>
+<body>
+
+<h2 align="center">lakshya mehrotra 24bci0212</h2>
+
+<div class="container">
+
+<h3>Student Information System</h3>
+
+<form id="studentForm">
+
+Name: <input type="text" name="name"><br>
+Age: <input type="number" name="age"><br>
+Course: <input type="text" name="course"><br>
+
+<button type="button" onclick="addStudent(this.form)">Add Student</button>
+<button type="button" onclick="resetForm(this.form)">Reset</button>
+
+</form>
+
+<h3>Student List</h3>
+
+<table id="studentTable">
+<tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Course</th>
+</tr>
+</table>
+
+</div>
+
+<script>
+    // Global array
+    var students = [];
+
+    // Object constructor
+    function Student(name, age, course) {
+        this.name = name;
+        this.age = age;
+        this.course = course;
+
+        this.getDetails = function() {
+            return this.name + " - " + this.course;
+        };
+    }
+
+    function addStudent(form) {
+        var name = form.elements["name"].value;
+        var age = form.elements["age"].value;
+        var course = form.elements["course"].value;
+
+        var student = new Student(name, age, course);
+        students.push(student);
+
+        displayStudents();
+
+        form.reset();
+        form.elements["name"].focus();
+    }
+
+    function displayStudents() {
+        var table = document.getElementById("studentTable");
+
+        // Clear old rows except header
+        table.innerHTML = "<tr><th>Name</th><th>Age</th><th>Course</th></tr>";
+
+        for (var i = 0; i < students.length; i++) {
+            var row = "<tr><td>" + students[i].name + "</td>" +
+                      "<td>" + students[i].age + "</td>" +
+                      "<td>" + students[i].course + "</td></tr>";
+
+            table.innerHTML += row;
+        }
+    }
+
+    function resetForm(form) {
+        form.reset();
+        form.elements["name"].focus();
+    }
+</script>
+
+</body>
+</html>
