@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Overlapping Image Gallery</title>
+
+    <style>
+        .container {
+            position: relative;
+            width: 500px;
+            height: 300px;
+        }
+
+        .img {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            cursor: pointer;
+        }
+
+        #img1 { top: 20px; left: 20px; }
+        #img2 { top: 60px; left: 80px; }
+        #img3 { top: 100px; left: 140px; }
+    </style>
+
+</head>
+<body>
+
+<h2>lakshya mehrotra 24bci0212</h2>
+
+<h3>Overlapping Image Gallery</h3>
+
+<div class="container">
+    <img src="/LA3/img1.jpg" id="img1" class="img" onclick="bringToFront(this)">
+    <img src="/LA3/img2.jpg" id="img2" class="img" onclick="bringToFront(this)">
+    <img src="/LA3/img3.jpg" id="img3" class="img" onclick="bringToFront(this)">
+</div>
+
+<script>
+    var topIndex = 1;
+
+    function bringToFront(element) {
+        element.style.zIndex = ++topIndex;
+    }
+</script>
+
+</body>
+</html>

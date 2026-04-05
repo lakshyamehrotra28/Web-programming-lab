@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Order Form</title>
+</head>
+<body>
+
+<h2>lakshya mehrotra 24bci0212</h2>
+
+<h3>Product Order Form</h3>
+
+<form>
+
+<!-- Category 1 -->
+<fieldset>
+<legend>Fruits</legend>
+<input type="checkbox" value="50"> Apple (₹50)<br>
+<input type="checkbox" value="30"> Banana (₹30)<br>
+<input type="checkbox" value="40"> Mango (₹40)<br>
+</fieldset>
+
+<br>
+
+<!-- Category 2 -->
+<fieldset>
+<legend>Snacks</legend>
+<input type="checkbox" value="20"> Chips (₹20)<br>
+<input type="checkbox" value="25"> Biscuits (₹25)<br>
+<input type="checkbox" value="35"> Chocolate (₹35)<br>
+</fieldset>
+
+<br>
+
+<!-- Category 3 -->
+<fieldset>
+<legend>Beverages</legend>
+<input type="checkbox" value="15"> Tea (₹15)<br>
+<input type="checkbox" value="20"> Coffee (₹20)<br>
+<input type="checkbox" value="40"> Juice (₹40)<br>
+</fieldset>
+
+<br>
+
+<button type="button" onclick="calculateTotal()">Calculate Total</button>
+
+</form>
+
+<p id="result"></p>
+
+<script>
+    function calculateTotal() {
+        var items = document.querySelectorAll("input[type='checkbox']");
+        var total = 0;
+
+        for (var item of items) {
+            if (item.checked) {
+                total += parseFloat(item.value);
+            }
+        }
+
+        document.getElementById("result").innerHTML = "Total Price: ₹" + total;
+    }
+</script>
+
+</body>
+</html>

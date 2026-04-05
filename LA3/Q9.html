@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Radio Button Selection</title>
+</head>
+<body>
+
+<h2>lakshya mehrotra 24bci0212</h2>
+
+<h3>Select a Color</h3>
+
+<input type="radio" name="color" value="Red"> Red<br>
+<input type="radio" name="color" value="Green"> Green<br>
+<input type="radio" name="color" value="Blue"> Blue<br><br>
+
+<button onclick="showColor()">Show Selected Color</button>
+
+<p id="result"></p>
+
+<script>
+    function showColor() {
+        var colors = document.getElementsByName("color");
+        var selected = "";
+
+        for (var i = 0; i < colors.length; i++) {
+            if (colors[i].checked) {
+                selected = colors[i].value;
+                break;
+            }
+        }
+
+        if (selected === "") {
+            document.getElementById("result").innerHTML = "No color selected";
+        } else {
+            document.getElementById("result").innerHTML = "Selected Color: " + selected;
+        }
+    }
+</script>
+
+</body>
+</html>

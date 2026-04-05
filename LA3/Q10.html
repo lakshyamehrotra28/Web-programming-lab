@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Checkbox Count</title>
+</head>
+<body>
+
+<h2>lakshya mehrotra 24bci0212</h2>
+
+<h3>Select Subjects</h3>
+
+<input type="checkbox" name="subject" value="Math"> Math<br>
+<input type="checkbox" name="subject" value="Science"> Science<br>
+<input type="checkbox" name="subject" value="English"> English<br>
+<input type="checkbox" name="subject" value="Computer"> Computer<br><br>
+
+<button onclick="countSubjects()">Show Selection</button>
+
+<p id="result"></p>
+
+<script>
+    function countSubjects() {
+        var subjects = document.getElementsByName("subject");
+        var selectedList = [];
+        var count = 0;
+
+        for (var i = 0; i < subjects.length; i++) {
+            if (subjects[i].checked) {
+                selectedList.push(subjects[i].value);
+                count++;
+            }
+        }
+
+        document.getElementById("result").innerHTML =
+            "Selected Count: " + count + "<br>" +
+            "Selected Subjects: " + selectedList.join(", ");
+    }
+</script>
+
+</body>
+</html>
